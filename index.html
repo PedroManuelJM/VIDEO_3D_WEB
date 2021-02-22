@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDEO 3D WEB </title>
+</head>
+<style>
+    html, body {
+     
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #000;
+      
+    }
+    .title{
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      padding: 20px 0;
+      color: #fff;
+    }
+  </style>
+<body>
+  
+    <div class="title">Usando la librería Panolen.js para mostrar un panorama de 360 °  </div>
+    <script src="js/three.min.js"></script>
+    <script src="js/panolens.min.js"></script>
+
+    <!-- creando el panorama -- video -->
+    <script>
+      var panorama, viewer;
+      panorama = new PANOLENS.VideoPanorama( 'video/clas.mp4', { autoplay: true } );
+
+      viewer = new PANOLENS.Viewer();
+      viewer.add( panorama );
+
+    </script>
+
+</body>
+</html>
